@@ -1,0 +1,25 @@
+{
+    "name": "l22",
+    "displayName": "l22 language support",
+    "description": "Support for l22 programming language for the course of Compilers in Instituto Superior Técnico",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "l22",
+            "aliases": ["l22", "l22"],
+            "extensions": [".l22"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "l22",
+            "scopeName": "source.l22",
+            "path": "./syntaxes/l22.tmLanguage.json"
+        }]
+    }
+}

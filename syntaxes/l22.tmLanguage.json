@@ -1,0 +1,53 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "l22",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.l22",
+				"match": "\\b(begin|end|if|elif|then:|do:|else:|write|writenl|while|for|retunr|input|null|var|int|double|text|void|public|private|foreign)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.l22",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.l22",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns":[{
+				"name": "comment.single_line.l22",
+				"begin": ";",
+				"patterns":[{
+					"name": "comments.single_line.l22",
+					"match": "\\\\."
+				}],
+				"end": "\\n"
+				}]
+		}
+		
+	},
+	"scopeName": "source.l22"
+}
